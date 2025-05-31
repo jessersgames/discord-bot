@@ -1,3 +1,17 @@
+from flask import Flask
+import threading
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is online!"
+
+def run():
+    app.run(host='0.0.0.0', port=5000)
+
+# Start de webserver in een aparte thread
+threading.Thread(target=run).start()
 import discord
 from discord.ext import commands
 import os
