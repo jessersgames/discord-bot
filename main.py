@@ -29,7 +29,7 @@ async def on_ready():
     print(f'{bot.user} has logged in!')
     print(f'Bot is in {len(bot.guilds)} guilds')
 
-@bot.command(name='payement')
+@bot.command(name='payment')
 async def payment_info(ctx):
     """Shows payment methods"""
     message = """## You can pay with the following payment methods.
