@@ -1,16 +1,3 @@
-from flask import Flask
-import threading
-
-app = Flask('')
-
-@app.route('/')
-def home():
-    return "Bot is online!"
-
-def run():
-    app.run(host='0.0.0.0', port=5000)
-
-threading.Thread(target=run).start()
 import discord
 from discord.ext import commands
 import os
@@ -28,7 +15,7 @@ async def on_ready():
     print(f'{bot.user} has logged in!')
     print(f'Bot is in {len(bot.guilds)} guilds')
 
-@bot.command(name='payment')
+@bot.command(name='payement')
 async def payment_info(ctx):
     """Shows payment methods"""
     message = """## You can pay with the following payment methods.
